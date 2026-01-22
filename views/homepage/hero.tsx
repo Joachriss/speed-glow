@@ -40,7 +40,7 @@ export default function Hero() {
                 size="large"
                 variant="contained"
                 color="error"
-                className="flex items-center gap-3 bg-white text-gray-900 hover:bg-gray-100"
+                className="flex animate-pulse items-center gap-3 bg-white text-gray-900 hover:bg-gray-100"
               >
                 View Products
               </Button>
