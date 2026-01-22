@@ -20,6 +20,7 @@ import TwitterIcon from "@mui/icons-material/X";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
+import { ShoppingBagIcon } from "@heroicons/react/16/solid";
 
 interface NavItemProps {
   label: string;
@@ -174,7 +175,7 @@ export default function Navbar() {
             <IconButton>
               <InstagramIcon />
             </IconButton>
-            <Button variant="contained" size="small" className="ml-auto">
+            <Button variant="contained" color="error" startIcon={<ShoppingBagIcon className="h-5 w-5"/>} size="small" className="ml-auto">
               Products
             </Button>
           </Box>

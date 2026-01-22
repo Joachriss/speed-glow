@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button, Typography, Box } from "@mui/material";
-import { ShoppingBagIcon } from "@heroicons/react/16/solid";
+import { ShoppingBagIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
   return (
@@ -41,10 +41,10 @@ export default function Hero() {
                 size="large"
                 variant="contained"
                 color="error"
-                startIcon={<ShoppingBagIcon />}
-                className="flex animate-pulse ease-in-out items-center gap-3 bg-white text-gray-900 hover:bg-gray-100"
+                startIcon={<ShoppingBagIcon className="h-6 w-6" />}
+                className="flex animate-pulse ease-in-out"
               >
-                View Products
+                Our Products
               </Button>
             </div>
           </Box>
