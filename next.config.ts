@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+// export const dynamic = "force-static";
 
 const nextConfig: NextConfig = {
   /* config options here */

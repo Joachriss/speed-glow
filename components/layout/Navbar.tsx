@@ -25,19 +25,20 @@ import { ShoppingBagIcon } from "@heroicons/react/16/solid";
 interface NavItemProps {
   label: string;
   href?: string;
+  target?: string;
 }
 
 const navItems: NavItemProps[] = [
-  { label: "Home" },
-  { label: "Products" },
-  { label: "About Us" }
+  { label: "Home", href: "/", target: "_self" },
+  { label: "Products", href: "/products", target: "_self" },
+  { label: "About Us", href: "/about", target: "_self" }
 ];
 
-function NavItem({ label, href }: NavItemProps) {
+function NavItem({ label, href,target }: NavItemProps) {
   return (
     <Link
       href={href || "#"}
-      target={href ? "_blank" : "_self"}
+      target={target === "_blank" ? "_blank" : "_self"}
       className="font-medium"
     >
       {label}
@@ -91,15 +92,17 @@ export default function Navbar() {
           >
             Speed Glow
           </Typography> */}
-          <img
-            src={
-              isScrolling
-                ? "/images/logo/logoBlack.png"
-                : "/images/logo/logoWhite.png"
-            }
-            alt="Logo"
-            className="w-20"
-          />
+          <Link href="/">
+            <img
+              src={
+                isScrolling
+                  ? "/images/logo/logoBlack.png"
+                  : "/images/logo/logoWhite.png"
+              }
+              alt="Logo"
+              className="w-20"
+            />
+          </Link>
 
           {/* Desktop Menu */}
           <Box

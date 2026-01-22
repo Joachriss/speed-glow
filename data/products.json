@@ -1,0 +1,69 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Hydrating Face Cream",
+            "slug": "hydrating-face-cream",
+            "category": "Skincare",
+            "image": "/images/products/heropng.png",
+            "brand": "Speed Glow",
+            "price": 19.99,
+            "currency": "USD",
+            "rating": 4.5,
+            "stock": 120,
+            "description": "A lightweight moisturizer enriched with hyaluronic acid for daily hydration."
+        },
+        {
+            "id": 2,
+            "name": "Matte Lipstick",
+            "slug": "matte-lipstick",
+            "category": "Makeup",
+            "image": "/images/products/heropng.png",
+            "brand": "Speed Glow",
+            "price": 12.50,
+            "currency": "USD",
+            "rating": 4.2,
+            "stock": 85,
+            "description": "Long-lasting matte lipstick available in multiple shades."
+        },
+        {
+            "id": 3,
+            "name": "Argan Oil Hair Serum",
+            "slug": "argan-oil-hair-serum",
+            "category": "Haircare",
+            "image": "/images/products/heropng.png",
+            "brand": "Speed Glow",
+            "price": 15.00,
+            "currency": "USD",
+            "rating": 4.7,
+            "stock": 60,
+            "description": "Nourishing serum infused with argan oil to reduce frizz and add shine."
+        },
+        {
+            "id": 4,
+            "name": "Aloe Vera Face Mask",
+            "slug": "aloe-vera-face-mask",
+            "category": "Skincare",
+            "image": "/images/products/heropng.png",
+            "brand": "Speed Glow",
+            "price": 8.99,
+            "currency": "USD",
+            "rating": 4.3,
+            "stock": 200,
+            "description": "Soothing mask with aloe vera extract to calm and refresh skin."
+        },
+        {
+            "id": 5,
+            "name": "Volumizing Mascara",
+            "slug": "volumizing-mascara",
+            "category": "Makeup",
+            "image": "/images/products/heropng.png",
+            "brand": "Speed Glow",
+            "price": 14.75,
+            "currency": "USD",
+            "rating": 4.6,
+            "stock": 95,
+            "description": "Mascara designed to add volume and length without clumping."
+        }
+    ]
+}
