@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
-import Providers from "@/providers";
-import Footer from "@/components/layout/footer";
+import ClientLayout from "@/components/layout/ClientLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +13,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// deals with beauty products
 export const metadata: Metadata = {
   title: "Speed Glow Products",
   description: "Beauty products for all skin types and tones.",
@@ -23,19 +20,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
+        {/*  Client logic lives here */}
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
