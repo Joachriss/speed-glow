@@ -27,9 +27,9 @@ export default function AppLoader() {
                 </motion.div>
 
                 <div className="loaderq"></div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                     Loading...
-                </p>
+                </p> */}
 
             </motion.div>
         </div>
