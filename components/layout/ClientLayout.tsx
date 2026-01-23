@@ -21,7 +21,7 @@ export default function ClientLayout({
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
+  if (!loading) {
     return <AppLoader />;
   }
 

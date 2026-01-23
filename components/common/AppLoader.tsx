@@ -14,8 +14,8 @@ export default function AppLoader() {
             >
                 {/* Logo */}
                 <motion.div
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ repeat: Infinity, duration: 1.2 }}
+                    // animate={{ scale: [1, 1.1, 1] }}
+                    // transition={{ repeat: Infinity, duration: 1.2 }}
                 >
                     <Image
                         src="/images/logo/logoWhite.png"   // 👈 your logo
@@ -26,7 +26,9 @@ export default function AppLoader() {
                     />
                 </motion.div>
 
-                <div className="loaderq"></div>
+                <div className="mx-auto w-full flex items-center justify-center">
+                    <div className="loaderq"></div>
+                </div>
                 {/* <p className="text-sm text-gray-500 dark:text-gray-400">
                     Loading...
                 </p> */}

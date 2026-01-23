@@ -34,7 +34,7 @@ body {
  transform: rotate(165deg);
 }
 
-.loaderq:before, .loader:after {
+.loaderq:before, .loaderq:after {
  content: "";
  position: absolute;
  top: 50%;
@@ -98,6 +98,6 @@ body {
 
 .loaderq {
  position: absolute;
- top: calc(50% - 1.25em);
- left: calc(50% - 1.25em);
+ /* top: calc(50% - 1.25em);
+ left: calc(50% - 1.25em); */
 }
