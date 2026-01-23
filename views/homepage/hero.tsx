@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Button, Typography, Box } from "@mui/material";
 import { ShoppingBagIcon } from "@heroicons/react/24/solid";
+import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -37,15 +39,17 @@ export default function Hero() {
             </Typography>
 
             <div className="flex flex-col mt-2 gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Button
-                size="large"
-                variant="contained"
-                color="error"
-                startIcon={<ShoppingBagIcon className="h-6 w-6" />}
-                className="flex animate-pulse ease-in-out"
-              >
-                Our Products
-              </Button>
+              <Link href="/products">
+                <motion.button
+                  className="flex flex-row ms-2 mt-2 py-2 px-4 uppercase rounded-md items-center gap-2 bg-red-700 text-white hover:bg-red-800 duration-300"
+                  initial={{ scale: 1 }}
+                  animate={{ scale: [1, 1.15, 1] }}
+                  transition={{ duration: 0.8, repeat: Infinity, repeatType: "loop" }}
+                >
+                  <ShoppingBagIcon className="h-6 w-6" />
+                  Our Products
+                </motion.button>
+              </Link>
             </div>
           </Box>
 

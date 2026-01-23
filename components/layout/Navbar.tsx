@@ -76,6 +76,7 @@ export default function Navbar() {
         sx={{
           backgroundColor: isScrolling ? "#fff" : "transparent",
           transition: "background-color 0.3s",
+          width: "100%",
         }}
       >
         <Toolbar className="container mx-auto flex justify-between">
@@ -140,7 +141,7 @@ export default function Navbar() {
           <IconButton
             onClick={() => setOpen(true)}
             className="md:hidden"
-            sx={{ color: isScrolling ? "grey.900" : "#fff" }}
+            sx={{ color: isScrolling ? "grey.900" : "#fff",display:{xs:"block",md:"none"} }}
           >
             <MenuIcon  />
             
@@ -151,8 +152,14 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <Drawer anchor="top" open={open} onClose={() => setOpen(false)}>
         <Box className="p-6">
-          <Box className="flex justify-between items-center mb-4">
-            <Typography variant="h6">Speed Glow</Typography>
+          <Box className="flex justify-between items-center mb-1">
+            <Link href="/">
+            <img
+              src={ "/images/logo/logoBlack.png"}
+              alt="Logo"
+              className="w-28"
+            />
+          </Link>
             <IconButton onClick={() => setOpen(false)}>
               <CloseIcon />
             </IconButton>
