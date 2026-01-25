@@ -74,7 +74,7 @@ export default function Hero() {
             transition={{ duration: 3, repeat: Infinity, repeatType: "loop", ease: "linear" }}
             src="/images/products/heropng.png"
             alt="Products photo"
-            className="w-full object-fill col-span-1 my-20 sm:scale-120 max-h-60 -translate-y-32 md:max-h-124 lg:my-0 lg:ml-auto lg:max-h-160 lg:translate-y-0"
+            className="w-full object-fill col-span-1 my-20 sm:scale-110 max-h-60 -translate-y-32 md:max-h-124 lg:my-0 lg:ml-auto lg:max-h-160 lg:translate-y-0"
           />
         </div>
       </header>
