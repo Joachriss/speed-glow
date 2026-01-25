@@ -54,7 +54,7 @@ export function WhySection() {
           {/* glass card */}
           <div className="relative rounded-3xl bg-white/70 p-4 shadow-xl backdrop-blur-md">
             <Image
-              src="/images/gallery/hands.jpg"
+              src="/images/gallery/Hands.jpg"
               alt="Speed Glow Beauty Products"
               width={500}
               height={600}
