@@ -87,18 +87,18 @@ export default function Gallery() {
                     Speed Glow Beauty
                   </Typography>
 
-                  <Button
+                  {/* <Button
                     size="small"
                     variant="contained"
                     color="error"
                     className="mt-3 bg-white text-gray-900 hover:bg-gray-100"
                     onClick={(e) => {
-                      e.stopPropagation(); // 👈 prevent modal trigger
+                      e.stopPropagation(); 
                       alert("Go to product page");
                     }}
                   >
                     View Product
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </motion.div>
