@@ -11,6 +11,7 @@ interface BeautyHeroProps {
   image: string;
   ctaText?: string;
   ctaLink?: string;
+  dimBackground?: boolean;
 }
 
 export default function PageHero({
@@ -20,6 +21,7 @@ export default function PageHero({
   image,
   ctaText,
   ctaLink,
+  dimBackground=true,
 }: BeautyHeroProps) {
   return (
     <section className="relative h-[75vh] min-h-130 w-full overflow-hidden">
@@ -33,7 +35,7 @@ export default function PageHero({
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className={`absolute inset-0 ${dimBackground ? "bg-black/50" : ""} `} />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto h-full flex items-center px-6">

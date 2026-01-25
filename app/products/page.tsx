@@ -13,8 +13,9 @@ export default function Products() {
         punchline="Luxury skincare crafted for real beauty lovers.  
         Clean formulas. Radiant skin. Confidence in every glow."
         image="/images/gallery/Web-02.jpg"
-        ctaText="Explore Collection"
-        ctaLink="#products"
+        // ctaText="Explore Collection"
+        // ctaLink="#products"
+        dimBackground={false}
       />
 
       {/* PRODUCTS SECTION */}
@@ -33,7 +34,7 @@ export default function Products() {
           </div>
 
           {/* Product Grid */}
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 ">
             {products.map((product: IBeautyProduct) => (
               <ProductCard key={product.id} product={product} />
             ))}
