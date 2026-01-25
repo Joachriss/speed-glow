@@ -119,13 +119,13 @@ export default function Navbar() {
           {/* Desktop Actions */}
           <Box className="hidden lg:flex items-center gap-2">
             <IconButton>
-              <TwitterIcon color={isScrolling ? "action" : "inherit"} />
+              <TwitterIcon  color={isScrolling ? "action" : "error"} />
             </IconButton>
             <IconButton>
-              <FacebookIcon color={isScrolling ? "action" : "inherit"} />
+              <FacebookIcon color={isScrolling ? "action" : "error"} />
             </IconButton>
             <IconButton>
-              <InstagramIcon color={isScrolling ? "action" : "inherit"} />
+              <InstagramIcon color={isScrolling ? "action" : "error"} />
             </IconButton>
             <Button
               startIcon={<ProductionQuantityLimitsIcon />}

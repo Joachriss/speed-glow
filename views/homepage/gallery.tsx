@@ -12,10 +12,17 @@ import {
   Button,
   Skeleton,
 } from "@mui/material";
+import { gallery } from "../../data/gallery.json";
+import { useRouter } from "next/navigation";
 
 export default function Gallery() {
   const [selected, setSelected] = useState<any>(null);
   const [loaded, setLoaded] = useState<Record<number, boolean>>({});
+  const router = useRouter();
+
+  const navigateTo = ()=>  {
+    router.push(`/products`);
+  }
 
   return (
     <div className="w-full">
@@ -29,8 +36,8 @@ export default function Gallery() {
 
       {/* Masonry */}
       <Box sx={{ width: "100%", px: 1 }}>
-        <Masonry columns={{ xs: 2, sm: 3, md: 4 }} spacing={1}>
-          {itemData.map((item, index) => (
+        <Masonry columns={{ xs: 3, md: 4 }} spacing={1}>
+          {gallery.map((item, index) => (
             <motion.div
               key={index}
               className="relative cursor-pointer overflow-hidden rounded-xl"
@@ -70,7 +77,7 @@ export default function Gallery() {
               </motion.div>
 
               {/* Overlay */}
-              <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/70 via-black/30 to-transparent opacity-100 md:opacity-0 md:hover:opacity-100 transition-opacity">
+              <div className="hidden sm:flex absolute inset-0 flex-col justify-end bg-linear-to-t from-black/70 via-black/30 to-transparent opacity-100 md:opacity-0 md:hover:opacity-100 transition-opacity">
                 <div className="p-4 flex flex-col">
                   <Typography className="text-white font-semibold">
                     {item.title}
@@ -80,7 +87,6 @@ export default function Gallery() {
                     Speed Glow Beauty
                   </Typography>
 
-                  {/* CTA */}
                   <Button
                     size="small"
                     variant="contained"
@@ -106,60 +112,91 @@ export default function Gallery() {
         onClose={() => setSelected(null)}
         maxWidth="md"
         fullWidth
+        slotProps={{
+          paper(ownerState) {
+            return {
+              style: {
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                padding: 0,
+              },
+            };
+          },
+          backdrop: {
+            style: {
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              backdropFilter: "blur(6px)",
+            },
+          },
+        }}
       >
         {selected && (
-          <DialogContent className="p-0 rounded-3xl">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {/* Image */}
-              <div className="relative h-100 md:h-full">
-                <Image
-                  src={selected.img}
-                  alt={selected.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <DialogContent className="p-0">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="relative w-full min-h-[50vh] md:min-h-[80vh] rounded-3xl overflow-hidden p-0"
+            >
+              {/* IMAGE */}
+              <Image
+                src={selected.img}
+                alt={selected.title}
+                fill
+                className="object-cover"
+                priority
+              />
 
-              {/* Content */}
-              <div className="p-6">
-                <Typography variant="h5" className="mb-2 font-bold">
+              {/* DARK GRADIENT OVERLAY */}
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
+
+              {/* CLOSE BUTTON */}
+              <button
+                onClick={() => setSelected(null)}
+                className="
+            absolute top-4 right-4 z-20
+            rounded-full text-white
+            bg-black/50 p-2 
+            hover:text-gray-200
+             transition
+          "
+              >
+                ✕
+              </button>
+
+              {/* CONTENT OVERLAY */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                <Typography className="text-white text-2xl font-semibold">
                   {selected.title}
                 </Typography>
 
-                <Typography className="mb-4 text-gray-600">
-                  A premium Speed Glow beauty product designed to enhance
-                  your natural glow and confidence.
+                <Typography className="text-gray-300 mt-1">
+                  Speed Glow Beauty
                 </Typography>
 
-                <Button
-                  variant="contained"
-                  size="large"
-                  color="error"
-                  className=""
-                >
-                  View Full Details
-                </Button>
+                {/* CTA */}
+                <div className="mt-6">
+                  <Button
+                    onClick={navigateTo}
+                    size="large"
+                    variant="contained"
+                    color="error"
+                    className="
+                rounded-full bg-white px-8 py-3
+                text-red-700 hover:bg-gray-100
+                normal-case font-semibold
+              "
+                  >
+                    View Product
+                  </Button>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </DialogContent>
         )}
       </Dialog>
+
     </div>
   );
 }
-
-
-const itemData = [
-  {
-    img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
-    title: "Radiance Facial Serum",
-    blur:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f",
-    title: "Glow Boost Moisturizer",
-    blur:
-      "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
-  },
-];

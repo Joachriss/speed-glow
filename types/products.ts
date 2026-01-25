@@ -8,12 +8,8 @@ interface IBeautyProduct {
     id: number;
     name: string;
     slug: string;
-    category: string; // extendable
-    image: string; // URL to product image
+    category: string;
+    image: string; 
     brand: string;
-    price: number;
-    currency: string;
-    rating: number; // average rating, e.g. 4.5
-    stock: number;  // available units
     description: string;
 }

@@ -1,0 +1,59 @@
+{
+  "gallery": [
+    {
+      "title": "Body",
+      "img": "/images/gallery/BODY.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "All products",
+      "img": "/images/gallery/Black-all-.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Hands",
+      "img": "/images/gallery/HANDS.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Whitening body cream",
+      "img": "/images/products/Body-Cream-White.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Vitamin C",
+      "img": "/images/gallery/Vitamin-C-serum-Box.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Vitamin C serum",
+      "img": "/images/gallery/vitamin-c-black.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Oil",
+      "img": "/images/products/Glow-oil-White.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Legs",
+      "img": "/images/gallery/LEGS.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Brightening Cream",
+      "img": "/images/gallery/Brightening-cream.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Moisturizer",
+      "img": "/images/gallery/Moisturizer-White-Box.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    },
+    {
+      "title": "Shower",
+      "img": "/images/gallery/SHOWER.jpg",
+      "blur":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+    }
+  ]
+}

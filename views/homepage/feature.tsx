@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Typography } from "@mui/material";
 import FeatureCard from "@/components/feature-card";
+import { motion } from "motion/react";
 const FEATURES = [
   {
     icon: SparklesIcon,
@@ -39,30 +40,37 @@ const FEATURES = [
 
 export function Features() {
   return (
-    <section className="py-28 px-4">
-      <div className="container mx-auto mb-20 text-center">
+    <motion.section
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="py-28 px-4"
+    >
+      <motion.div
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="container mx-auto mb-20 text-center"
+      >
         <Typography color="error" className="mb-2 font-bold uppercase">
           Speed Glow Beauty
         </Typography>
         <Typography variant="h2" color="blue-gray" className="mb-4">
-          Radiance That Shines Every Day
+          All-Day Radiance Starts Here
         </Typography>
         <Typography
           variant="body2"
           className="mx-auto w-full px-4 text-gray-500 lg:w-11/12 lg:px-8 "
         >
-          Discover the power of Speed Glow products crafted to give your skin instant
-          luminosity, lasting hydration, and protection against daily stressors. Whether
-          you’re heading to work, out with friends, or preparing for a special occasion,
-          Speed Glow fits seamlessly into your beauty routine.
+          Unlock deeply hydrated, smoother, and visibly brighter skin with Speed Glow — skincare made to glow with your lifestyle, not just for photos.
         </Typography>
-      </div>
+      </motion.div>
       <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-2">
         {FEATURES.map((props, idx) => (
           <FeatureCard key={idx} {...props} />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 export default Features;

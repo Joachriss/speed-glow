@@ -1,53 +1,47 @@
-import Hero from "@/views/homepage/hero";
 import { products } from "@/data/products.json";
-import Link from "next/link";
-
+import ProductCard from "@/components/ProductCard";
+import PageHero from "@/components/common/PageHero";
 
 export default function Products() {
   return (
-    <>
-      <div className="min-h-screen">
-        {/* Products page content with hero and list of products */}
-        <Hero />
-        <div className="container mx-auto py-16">
-          <h1 className="text-4xl font-bold mb-8">Our Products</h1>
-          {/* Product listing would go here */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {/* Product cards would go here */}
-            {
-              products.map((product: IBeautyProduct) => (
-                <Link href={`/products/${product.slug}`} key={product.id}>
+    <div className="min-h-screen bg-white">
 
-                  <div key={product.id} className="border p-4 rounded-lg shadow-md">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-48 object-cover mb-4"
-                    />
-                    <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
-                    <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
-                      View Details
-                    </button>
-                  </div>
-                </Link>
-              ))
-            }
-            <div className="border p-4 rounded-lg shadow-md">
-              <img
-                src="/images/products/heropng.png"
-                alt="Product Image"
-                className="w-full h-48 object-cover mb-4"
-              />
-              <h2 className="text-xl font-semibold mb-2">Product Name</h2>
-              <p className="text-gray-600 mb-4">Brief description of the product.</p>
-              <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
-                View Details
-              </button>
-            </div>
+      {/* HERO */}
+      <PageHero
+        title="Glow Is Not A Trend. It’s A Lifestyle."
+        subtitle="Speed Glow Collection"
+        punchline="Luxury skincare crafted for real beauty lovers.  
+        Clean formulas. Radiant skin. Confidence in every glow."
+        image="/images/gallery/Web-02.jpg"
+        ctaText="Explore Collection"
+        ctaLink="#products"
+      />
+
+      {/* PRODUCTS SECTION */}
+      <section id="products" className="py-24 px-4">
+        <div className="container mx-auto max-w-7xl">
+
+          {/* Section Header */}
+          <div className="mb-16 text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4">
+              Our Beauty Essentials
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Every product is designed to nourish your skin, elevate your
+              routine, and bring out your natural glow — effortlessly.
+            </p>
           </div>
+
+          {/* Product Grid */}
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {products.map((product: IBeautyProduct) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+
         </div>
-      </div>
-    </>
+      </section>
+
+    </div>
   );
 }

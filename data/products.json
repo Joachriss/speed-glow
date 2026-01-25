@@ -1,69 +1,58 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Hydrating Face Cream",
-            "slug": "hydrating-face-cream",
-            "category": "Skincare",
-            "image": "/images/products/heropng.png",
-            "brand": "Speed Glow",
-            "price": 19.99,
-            "currency": "USD",
-            "rating": 4.5,
-            "stock": 120,
-            "description": "A lightweight moisturizer enriched with hyaluronic acid for daily hydration."
-        },
-        {
-            "id": 2,
-            "name": "Matte Lipstick",
-            "slug": "matte-lipstick",
-            "category": "Makeup",
-            "image": "/images/products/heropng.png",
-            "brand": "Speed Glow",
-            "price": 12.50,
-            "currency": "USD",
-            "rating": 4.2,
-            "stock": 85,
-            "description": "Long-lasting matte lipstick available in multiple shades."
-        },
-        {
-            "id": 3,
-            "name": "Argan Oil Hair Serum",
-            "slug": "argan-oil-hair-serum",
-            "category": "Haircare",
-            "image": "/images/products/heropng.png",
-            "brand": "Speed Glow",
-            "price": 15.00,
-            "currency": "USD",
-            "rating": 4.7,
-            "stock": 60,
-            "description": "Nourishing serum infused with argan oil to reduce frizz and add shine."
-        },
-        {
-            "id": 4,
-            "name": "Aloe Vera Face Mask",
-            "slug": "aloe-vera-face-mask",
-            "category": "Skincare",
-            "image": "/images/products/heropng.png",
-            "brand": "Speed Glow",
-            "price": 8.99,
-            "currency": "USD",
-            "rating": 4.3,
-            "stock": 200,
-            "description": "Soothing mask with aloe vera extract to calm and refresh skin."
-        },
-        {
-            "id": 5,
-            "name": "Volumizing Mascara",
-            "slug": "volumizing-mascara",
-            "category": "Makeup",
-            "image": "/images/products/heropng.png",
-            "brand": "Speed Glow",
-            "price": 14.75,
-            "currency": "USD",
-            "rating": 4.6,
-            "stock": 95,
-            "description": "Mascara designed to add volume and length without clumping."
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Speed Glow Face & Body Wash",
+      "slug": "speed-glow-face-body-wash",
+      "category": "Skincare",
+      "image": "/images/products/Shower-Gel-red.jpg",
+      "brand": "Speed Glow",
+      "description": "A gentle yet effective cleanser that removes dirt, excess oil, and impurities while leaving the skin fresh, soft, and hydrated. Suitable for daily use on both face and body."
+    },
+    {
+      "id": 2,
+      "name": "Speed Glow Brightening Serum",
+      "slug": "speed-glow-brightening-serum",
+      "category": "Skincare",
+      "image": "/images/products/Serum-Red.jpg",
+      "brand": "Speed Glow",
+      "description": "A lightweight serum that targets uneven skin tone, dullness, and dark spots. Helps improve skin clarity and enhances natural radiance with regular use."
+    },
+    {
+      "id": 3,
+      "name": "Speed Glow Body Oil",
+      "slug": "speed-glow-body-oil",
+      "category": "Skincare",
+      "image": "/images/products/Glow-oil-Red.jpg",
+      "brand": "Speed Glow",
+      "description": "A nourishing oil that deeply moisturizes the skin, improves elasticity, and leaves a smooth, healthy glow without feeling greasy."
+    },
+    {
+      "id": 4,
+      "name": "Speed Glow Whitening Body Cream",
+      "slug": "speed-glow-whitening-body-cream",
+      "category": "Skincare",
+      "image": "/images/products/Body-Cream-Red.jpg",
+      "brand": "Speed Glow",
+      "description": "A rich body cream designed to hydrate, soften, and help even out skin tone while improving skin texture over time."
+    },
+    {
+      "id": 5,
+      "name": "Speed Glow Brightening Cream",
+      "slug": "speed-glow-brightening-cream",
+      "category": "Skincare",
+      "image": "/images/products/Brightening-Cream-Red.jpg",
+      "brand": "Speed Glow",
+      "description": "A daily cream that helps brighten the skin, reduce the appearance of blemishes, and maintain moisture throughout the day."
+    },
+    {
+      "id": 6,
+      "name": "Speed Glow Yellow Glow Moisturizer",
+      "slug": "speed-glow-yellow-glow-moisturizer",
+      "category": "Skincare",
+      "image": "/images/products/Moisturizer-Red.jpg",
+      "brand": "Speed Glow",
+      "description": "A moisturizing cream formulated to lock in hydration, support skin repair, and promote a radiant, healthy look."
+    }
+  ]
 }
