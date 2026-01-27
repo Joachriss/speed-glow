@@ -18,7 +18,7 @@ import { motion } from "motion/react";
 const LINKS = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
-  { label: "About us", href: "#" },
+  { label: "About us", href: "/about" },
 ];
 
 const CURRENT_YEAR = new Date().getFullYear();

@@ -34,7 +34,7 @@ const navItems: NavItemProps[] = [
   { label: "About Us", href: "/about", target: "_self" }
 ];
 
-function NavItem({ label, href,target }: NavItemProps) {
+function NavItem({ label, href, target }: NavItemProps) {
   return (
     <Link
       href={href || "#"}
@@ -107,9 +107,8 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <Box
-            className={`hidden lg:flex gap-6 ${
-              isScrolling ? "text-gray-900" : "text-white"
-            }`}
+            className={`hidden lg:flex gap-6 ${isScrolling ? "text-gray-900" : "text-white"
+              }`}
           >
             {navItems.map((item) => (
               <NavItem key={item.label} {...item} />
@@ -119,7 +118,7 @@ export default function Navbar() {
           {/* Desktop Actions */}
           <Box className="hidden lg:flex items-center gap-2">
             <IconButton>
-              <TwitterIcon  color={isScrolling ? "action" : "error"} />
+              <TwitterIcon color={isScrolling ? "action" : "error"} />
             </IconButton>
             <IconButton>
               <FacebookIcon color={isScrolling ? "action" : "error"} />
@@ -127,24 +126,26 @@ export default function Navbar() {
             <IconButton>
               <InstagramIcon color={isScrolling ? "action" : "error"} />
             </IconButton>
-            <Button
-              startIcon={<ProductionQuantityLimitsIcon />}
-              variant="contained"
-              size="small"
-              color={"error"}
-            >
-              Products
-            </Button>
+            <Link href="/products">
+              <Button
+                startIcon={<ProductionQuantityLimitsIcon />}
+                variant="contained"
+                size="small"
+                color={"error"}
+              >
+                Products
+              </Button>
+            </Link>
           </Box>
 
           {/* Mobile Toggle */}
           <IconButton
             onClick={() => setOpen(true)}
             className="md:hidden"
-            sx={{ color: isScrolling ? "grey.900" : "#fff",display:{xs:"block",md:"none"} }}
+            sx={{ color: isScrolling ? "grey.900" : "#fff", display: { xs: "block", md: "none" } }}
           >
-            <MenuIcon  />
-            
+            <MenuIcon />
+
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -154,12 +155,12 @@ export default function Navbar() {
         <Box className="p-6">
           <Box className="flex justify-between items-center mb-1">
             <Link href="/">
-            <img
-              src={ "/images/logo/logoBlack.png"}
-              alt="Logo"
-              className="w-28"
-            />
-          </Link>
+              <img
+                src={"/images/logo/logoBlack.png"}
+                alt="Logo"
+                className="w-28"
+              />
+            </Link>
             <IconButton onClick={() => setOpen(false)}>
               <CloseIcon />
             </IconButton>
@@ -185,7 +186,7 @@ export default function Navbar() {
             <IconButton>
               <InstagramIcon />
             </IconButton>
-            <Button variant="contained" color="error" startIcon={<ShoppingBagIcon className="h-5 w-5"/>} size="small" className="ml-auto">
+            <Button variant="contained" color="error" startIcon={<ShoppingBagIcon className="h-5 w-5" />} size="small" className="ml-auto">
               Products
             </Button>
           </Box>

@@ -12,6 +12,7 @@ export default function AboutPage() {
         punchline="We believe skincare should be simple, effective, and empowering. 
         Speed Glow was born to help you feel confident in your skin — every single day."
         image="/images/gallery/Web-3.jpg"
+        dimBackground={false}
       />
 
       {/* STORY */}
@@ -38,8 +39,8 @@ export default function AboutPage() {
           </div>
 
           {/* IMAGE */}
-          <div className="relative">
-            <div className="absolute -inset-8 bg-pink-300/20 blur-3xl rounded-full" />
+          <div className="relative max-w-screen">
+            {/* <div className="absolute -inset-8 bg-pink-300/20 blur-3xl rounded-full" /> */}
             <Image
               src="/images/gallery/all-red.jpg"
               alt="Speed Glow Beauty"
